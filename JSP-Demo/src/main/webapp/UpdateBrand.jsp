@@ -8,12 +8,13 @@
 </head>
 <body>
 <h3>修改品牌</h3>
-<form action="/JSP-Demo/UpdateServlet" method="get">
-    <input name="id" value="${brand.id}">
+<form action="/JSP-Demo/UpdateServlet" method="post">
     品牌名称：<input name="brandName" value="${brand.brandName}"><br>
     企业名称：<input name="companyName" value="${brand.companyName}"> <br>
     排序：<input name="ordered" value="${brand.ordered}"><br>
-    描述信息：<textarea rows="5" cols="20" name="description" >${brand.description}</textarea><br>
+    描述信息：
+    <textarea rows="5" cols="20" name="description" >${brand.description}</textarea><br>
+    <input name="id" value="${brand.id}" type="hidden">
     状态：
     <c:if test="${brand.status==0}">
         <input type="radio" name="status" value="0" checked>禁用
