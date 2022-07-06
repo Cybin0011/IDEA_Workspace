@@ -33,7 +33,7 @@
             <c:if test="${brand.status != 1}">
                 <td>禁用</td>
             </c:if>
-            <td><a href="/brand-demo/selectByIdServlet?id=${brand.id}">修改</a> <a href="#">删
+            <td><a href="/JSP-Demo/SelectByIdServlet?id=${brand.id}">修改</a> <a href="#">删
                 除</a></td>
         </tr>
     </c:forEach>
