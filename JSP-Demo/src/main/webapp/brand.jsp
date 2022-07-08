@@ -7,6 +7,7 @@
     <title>Title</title>
 </head>
 <body>
+<h1>${sessionScope.user.username}，欢迎你</h1>
 <input type="button" value="新增" id="add"><br>
 <hr>
 <table border="1" cellspacing="0" width="80%">

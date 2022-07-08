@@ -48,6 +48,11 @@
             <artifactId>standard</artifactId>
             <version>1.1.2</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.js-cookie</groupId>
+            <artifactId>java-cookie</artifactId>
+            <version>0.0.2</version>
+        </dependency>
     </dependencies>  <build>
     <plugins>
         <plugin>

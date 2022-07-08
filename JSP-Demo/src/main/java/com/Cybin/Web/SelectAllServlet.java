@@ -5,6 +5,7 @@ package com.Cybin.Web; /**
  */
 
 import com.Cybin.Pojo.Brand;
+import com.Cybin.Pojo.User;
 import com.Cybin.Service.BrandService;
 
 import javax.servlet.*;
@@ -23,6 +24,7 @@ public class SelectAllServlet extends HttpServlet {
         List<Brand> brands = brandService.selectAll();
         request.setAttribute("brands",brands);
         request.getRequestDispatcher("/brand.jsp").forward(request,response);
+
     }
 
     @Override
