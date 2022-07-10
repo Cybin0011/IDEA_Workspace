@@ -1,4 +1,4 @@
-package com.Cybin.Utils;
+package com.Cybin.Service;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

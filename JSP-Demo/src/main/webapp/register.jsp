@@ -12,6 +12,7 @@
     <div class="reg-content">
         <h1>欢迎注册</h1>
         <span>已有帐号？</span> <a href="login.jsp">登录</a>
+        <div id="errorMsg_register">${msg_register}</div>
     </div>
     <form id="reg-form" action="/JSP-Demo/RegisterServlet" method="post">
 
@@ -22,7 +23,7 @@
                 <td class="inputs">
                     <input name="username" type="text" id="username">
                     <br>
-                    <span id="username_err" class="err_msg" >${msg_register}</span>
+
                 </td>
 
             </tr>
@@ -41,11 +42,9 @@
                 <td>验证码</td>
                 <td class="inputs">
                     <input name="checkCode" type="text" id="checkCode">
-                    <img src="imgs/a.jpg">
-                    <a href="#" id="changeImg">看不清？</a>
+                    <img id="checkCodeImg" style="CURSOR: pointer" src="/JSP-Demo/CheckCodeServlet" onclick=change()>
                 </td>
             </tr>
-
         </table>
 
         <div class="buttons">
@@ -57,6 +56,10 @@
 </div>
 </body>
 <script>
+function change(){
+    var date = new Date().getTime();
+    document.getElementById("checkCodeImg").src="/JSP-Demo/CheckCodeServlet?"+date;
+}
 
 </script>
 </html>
