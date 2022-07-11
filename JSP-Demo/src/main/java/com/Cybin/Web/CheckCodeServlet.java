@@ -5,6 +5,7 @@ package com.Cybin.Web; /**
  */
 
 import com.Cybin.Service.CheckCodeUtil;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -22,7 +23,7 @@ public class CheckCodeServlet extends HttpServlet {
         //checkCode为最终验证码的数据
         String checkCode = CheckCodeUtil.outputVerifyImage(100, 50, fos, 4);
         HttpSession session_checkCode = request.getSession();
-        session_checkCode.setAttribute("checkCode",checkCode);
+        session_checkCode.setAttribute("checkCode", checkCode);
         System.out.println("图片生成");
     }
 

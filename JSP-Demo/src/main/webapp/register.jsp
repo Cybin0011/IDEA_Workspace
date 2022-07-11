@@ -56,10 +56,10 @@
 </div>
 </body>
 <script>
-function change(){
-    var date = new Date().getTime();
-    document.getElementById("checkCodeImg").src="/JSP-Demo/CheckCodeServlet?"+date;
-}
+    function change() {
+        var date = new Date().getTime();
+        document.getElementById("checkCodeImg").src = "/JSP-Demo/CheckCodeServlet?" + date;
+    }
 
 </script>
 </html>
